@@ -2,6 +2,7 @@ name: Python Runner
 
 on:
   workflow_dispatch:
+
   push:
     branches:
       - main
@@ -17,7 +18,10 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
-      - name: Run Python
-        run: python S.py
+      - name: Check Python version
+        run: python --version
+
+      - name: Run Python script
+        run: python -u ./S.py
