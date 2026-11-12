@@ -24,4 +24,4 @@ jobs:
         run: python --version
 
       - name: Run Python script
-        run: python -u ./S.py
+        run: python -u ./ddos.py
